@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Tumores Cerebrais</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+</head>
+<body>
+     <!-- Navegaçao -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="nav-logo">
+                    <i class="fa-solid fa-user-doctor" style="color: rgb(255, 255, 255);"></i>
+                </div>
+                <div>
+                    <div class="nav-title">Brain Scan</div>
+                    <div class="nav-subtitle">Classificador de Tumores Cerebrais</div>
+                </div>
+            </div>
+            <div class="nav-links">
+
+               
+                <a href="https://github.com/rayssasnt" class="nav-link">
+                    <i class="fa-brands fa-github" style="color: rgb(31, 32, 35);"></i>
+                     GitHub</a>
+
+                <a href="https://www.linkedin.com/in/rayssasnt/" class="nav-link">
+                    <i class="fa-brands fa-linkedin" style="color: rgb(31, 32, 35);"></i>
+                     LinkedIn</a>
+                <!-- <a href="#" class="nav-link">Recommendations</a> -->
+
+                <a href="pag2_imagens.html" class="nav-link">Imagens para teste</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- container -->
+     <div class="container">
+        <div class="id-dowloand">
+            <div class="hero">
+                <h1> 🧠⚕️Imagens para Teste</h1>
+                <p>Faça o download das Imagens abaixo e teste nosso modelo </p>
+            </div>
+
+
+        <!-- Rótulo da seção -->
+        <!-- <p class="section-label">Imagens de exemplo:</p> -->
+
+        <!-- Grid de imagens -->
+        <div class="images-grid" id="imagesGrid">
+
+            <!-- Glioma -->
+            <div class="img-card" data-type="glioma">
+                <div class="img-wrap">
+                    <!-- Substitua o bloco abaixo por <img src="caminho/glioma.jpg" alt="Exemplo Glioma"> -->
+                    <div class="img-placeholder">
+                        
+                        <img src="imgs/Tumor Glioma.png" alt="Tumor Glioma">
+                        
+                    </div>
+                    <span class="type-pill pill-glioma">Glioma</span>
+                </div>
+                <div class="img-footer">
+                
+                    <a class="btn-download" href="imgs/Tumor Glioma.png" download>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download Glioma
+                    </a>
+                </div>
+            </div>
+
+            <!-- Meningioma -->
+            <div class="img-card" data-type="meningioma">
+                <div class="img-wrap">
+                    <div class="img-placeholder">
+                       <img src="imgs/Tumor Meningioma.jpg" alt="">
+                    </div>
+                    <span class="type-pill pill-meningioma">Meningioma</span>
+                </div>
+                <div class="img-footer">
+                  
+                    <a class="btn-download" href="imgs/Tumor Meningioma.jpg" download>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download Meningioma
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pituitary -->
+            <div class="img-card" data-type="pituitary">
+                <div class="img-wrap">
+                    <div class="img-placeholder">
+                       <img src="imgs/Tumor Pituitary.png" alt="">
+                    
+                    </div>
+                    <span class="type-pill pill-pituitary">Tumor Pituitário</span>
+                </div>
+                <div class="img-footer">
+                    
+                    <a class="btn-download" href="imgs/Tumor Pituitary.png" download>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download Pituitário
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sem Tumor -->
+            <div class="img-card" data-type="notumor">
+                <div class="img-wrap">
+                    <div class="img-placeholder">
+                        <img src="imgs/SEM Tumor.png" alt="">
+                       
+                    </div>
+                    <span class="type-pill pill-notumor">Sem Tumor</span>
+                </div>
+                <div class="img-footer">
+               
+                    <a class="btn-download" href="imgs/SEM Tumor.png" download>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download Sem Tumor
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+
+
+     </div>
+</body>
+</html>
