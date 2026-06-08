@@ -71,7 +71,7 @@ async function analisarImagem(file) {
     try{
         // URL
         const response = await fetch(
-            "http://127.0.0.1:5000/classificar",
+            "https://classificador-de-tumores-cerebrais.onrender.com/classificar",
             {
                 method: "POST",
                 body : formData
