@@ -1,4 +1,4 @@
-// DOM Elements
+// Elements
 const uploadView = document.getElementById('uploadView');
 const analysisView = document.getElementById('analysisView');
 const uploadArea = document.getElementById('uploadArea');
@@ -7,7 +7,6 @@ const backButton = document.getElementById('backButton');
 const analise_de_Imagem = document.getElementById('analysisImage');
 const loadingOverlay = document.getElementById('loadingOverlay');
 const resultsColumn = document.getElementById('resultsColumn');
-
 
 
 // Event Listeners
@@ -44,7 +43,7 @@ backButton.addEventListener('click', () => {
     fileInput.value = '';
 });
 
-// Handle File Upload
+
 function handleFile(file) {
     const reader = new FileReader();
     reader.onload = (e) => {
@@ -55,16 +54,14 @@ function handleFile(file) {
     reader.readAsDataURL(file);
 }
 
-// Show Analysis View
+// mostrar analises
 function showAnalysisView() {
     uploadView.classList.add('hidden');
     analysisView.classList.add('active');
     loadingOverlay.style.display = 'flex';
 }
 
-// Simulate Analysis (this is where you'd connect to your Python backend)
 async function analisarImagem(file) {
-    // Simulate 3 second processing time
     loadingOverlay.style.display = "flex";
 
     const formData = new FormData();
@@ -72,7 +69,7 @@ async function analisarImagem(file) {
     formData.append("imagem",file);
 
     try{
-
+        // URL
         const response = await fetch(
             "http://127.0.0.1:5000/classificar",
             {
@@ -93,9 +90,8 @@ async function analisarImagem(file) {
         loadingOverlay.style.display= "none";
     }
 }
-// card principal 
 
-// Display Results
+// Results
 function displayResults(resultado) {
     
     console.log(resultado);
@@ -144,7 +140,7 @@ function displayResults(resultado) {
     
     `;
 
-    // Animate probability bars
+    // Barras animadas
     setTimeout(() => {
         document.querySelectorAll('.probability-fill').forEach((bar, i) => {
             bar.style.width = resultado.probabilidades[i].confidence + '%';
@@ -152,14 +148,14 @@ function displayResults(resultado) {
     }, 100);
 }
 
-// Optional: Add keyboard shortcuts
+
 document.addEventListener('keydown', (e) => {
-    // Press Escape to go back
+   
     if (e.key === 'Escape' && analysisView.classList.contains('active')) {
         backButton.click();
     }
 });
 
 // Log 
-console.log('NeuroAI Brain Tumor Classifier initialized');
-console.log('Ready to analyze MRI scans');
+console.log('APP iniciado');
+
